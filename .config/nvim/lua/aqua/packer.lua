@@ -6,6 +6,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    use { 'mg979/vim-visual-multi', branch = 'master' }
+    -- use { 'sourcegraph/sg.nvim', requires = { { 'nvim-lua/plenary.nvim' } }, run = 'nvim -l build/init.lua' }
     use 'mattn/emmet-vim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
