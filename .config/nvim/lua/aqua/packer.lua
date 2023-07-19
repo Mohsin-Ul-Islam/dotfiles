@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use { 'mg979/vim-visual-multi', branch = 'master' }
+    use 'f-person/git-blame.nvim'
     -- use { 'sourcegraph/sg.nvim', requires = { { 'nvim-lua/plenary.nvim' } }, run = 'nvim -l build/init.lua' }
     use 'mattn/emmet-vim'
     use {

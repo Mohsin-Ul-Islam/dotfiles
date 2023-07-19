@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/aqua/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/aqua/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/aqua/.local/share/nvim/site/pack/packer/start/harpoon",
