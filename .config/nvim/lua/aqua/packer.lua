@@ -8,8 +8,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { 'mg979/vim-visual-multi', branch = 'master' }
     use 'f-person/git-blame.nvim'
+    use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-jdtls'
     -- use { 'sourcegraph/sg.nvim', requires = { { 'nvim-lua/plenary.nvim' } }, run = 'nvim -l build/init.lua' }
-    use 'mattn/emmet-vim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
