@@ -19,6 +19,4 @@ local config = {
     },
 }
 
-vim.cmd [[autocmd BufWritePre *.java lua require('jdtls').organize_imports()]]
-
 require('jdtls').start_or_attach(config)
