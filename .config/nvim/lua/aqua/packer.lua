@@ -15,7 +15,11 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
+    -- Color schemes
     use 'navarasu/onedark.nvim'
+    use { "ellisonleao/gruvbox.nvim" }
+
     use 'ThePrimeagen/harpoon'
     use { 'nvim-treesitter/nvim-treesitter', run = { ':TSUpdate' } }
     use {
