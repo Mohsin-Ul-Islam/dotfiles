@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/mohsinulislam/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-startuptime"] = {
+    loaded = true,
+    path = "/Users/mohsinulislam/.local/share/nvim/site/pack/packer/start/vim-startuptime",
+    url = "https://github.com/dstein64/vim-startuptime"
+  },
   ["vim-visual-multi"] = {
     loaded = true,
     path = "/Users/mohsinulislam/.local/share/nvim/site/pack/packer/start/vim-visual-multi",

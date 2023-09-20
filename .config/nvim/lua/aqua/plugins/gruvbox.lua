@@ -1,6 +1,4 @@
-local gruvbox = require("gruvbox")
-
-gruvbox.setup({
+local opts = {
     undercurl = true,
     underline = true,
     bold = true,
@@ -21,6 +19,13 @@ gruvbox.setup({
     overrides = {},
     dim_inactive = false,
     transparent_mode = false,
-})
+}
 
-vim.cmd("colorscheme gruvbox")
+return {
+    "ellisonleao/gruvbox.nvim",
+    opts = opts,
+    config = function()
+        vim.cmd('colorscheme gruvbox')
+    end
+}
+
