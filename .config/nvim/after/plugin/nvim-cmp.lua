@@ -3,14 +3,18 @@ local cmp = require('cmp')
 cmp.setup({
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
-        ['<C-j>'] = cmp.mapping(function(callback)
+        ['<C-j>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
+            else
+                fallback()
             end
         end),
-        ['<C-k>'] = cmp.mapping(function(callback)
+        ['<C-k>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
+            else
+                fallback()
             end
         end),
     },
