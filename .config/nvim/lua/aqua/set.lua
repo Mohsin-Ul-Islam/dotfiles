@@ -16,4 +16,8 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 vim.diagnostic.config({ virtual_text = false })
