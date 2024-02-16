@@ -1,6 +1,5 @@
 return {
     'hrsh7th/nvim-cmp',
-    version = '0.1.1',
     dependencies = { { 'nvim-lua/plenary.nvim' } },
     config = function()
         local cmp = require('cmp')
