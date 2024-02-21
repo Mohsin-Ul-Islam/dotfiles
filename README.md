@@ -10,6 +10,16 @@ First install the fish shell from here: https://fishshell.com/
 
 Now create an alias named dotfiles that will use git to manage your dotfiles on the system.
 
+### Fisher
+
+Now install the fish plugin manager
+
+```
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+```
+
+Now setup the dotfiles repository
+
 ```
 alias --save dotfiles git --git-dir=.dotfiles --work-tree=$HOME
 ```
@@ -24,6 +34,12 @@ Rename the default branch to main
 
 ```
 dotfiles branch -m master main
+```
+
+Set the config to not show untracked files
+
+```
+dotfiles config --local status.showUntrackedFiles no
 ```
 
 Then set the remote
@@ -44,7 +60,7 @@ Install the tmux https://github.com/tmux/tmux
 
 ### Tmux Plugin Manager
 
-Install the tpm 
+Install the tpm (tmux plugin manager)
 
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
