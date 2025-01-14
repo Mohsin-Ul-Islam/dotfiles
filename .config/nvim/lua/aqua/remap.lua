@@ -10,6 +10,9 @@ vim.api.nvim_set_keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>rs", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
+-- rest.nvim
+vim.api.nvim_set_keymap("n", "<leader>rr", "<cmd>Rest run<CR>", { noremap = true, silent = true })
+
 -- code diagnostics
 vim.api.nvim_set_keymap("n", "<leader>sd", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>nd", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
