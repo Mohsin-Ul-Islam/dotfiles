@@ -25,4 +25,5 @@ if is_bazel_project then
     }
 end
 
-require('lspconfig').gopls.setup(opts)
+vim.lsp.config('gopls', opts)
+
