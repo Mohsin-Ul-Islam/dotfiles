@@ -70,6 +70,14 @@ Now install the tmux plugins by pressing the `Ctrl+B` then `I`
 
 For more information: https://github.com/tmux-plugins/tpm
 
+### FZF
+
+For using the tmux sessionizer script, install `fzf`
+
+```
+sudo apt install fzf
+```
+
 ### Neovim
 
 Install the neovim from https://github.com/neovim/neovim
