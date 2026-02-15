@@ -38,4 +38,4 @@ vim.lsp.config("*", {
     end,
 })
 
-vim.lsp.enable({ "gopls", "lua_ls", "clangd", "pyright", "kotlin_lsp" })
+vim.lsp.enable({ "gopls", "lua_ls", "clangd", "pyright", "kotlin_lsp", "docker_language_server" })
