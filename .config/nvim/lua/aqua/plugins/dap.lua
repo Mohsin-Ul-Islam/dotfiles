@@ -1,1 +1,1 @@
-return { 'mfussenegger/nvim-dap', lazy = true }
+return { "mfussenegger/nvim-dap", lazy = true }

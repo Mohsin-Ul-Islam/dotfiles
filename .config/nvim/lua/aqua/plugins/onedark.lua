@@ -1,1 +1,1 @@
-return { 'navarasu/onedark.nvim', opts = { style = 'darker', transparent = true } }
+return { "navarasu/onedark.nvim", opts = { style = "darker", transparent = true } }

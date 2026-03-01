@@ -1,1 +1,1 @@
-return { 'f-person/git-blame.nvim', opts = { delay = 1000 } }
+return { "f-person/git-blame.nvim", opts = { delay = 1000 } }

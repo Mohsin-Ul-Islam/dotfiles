@@ -1,5 +1,5 @@
 return {
-    "hudclark/grpc-nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    ft = { 'http', 'grpc' },
+	"hudclark/grpc-nvim",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	ft = { "http", "grpc" },
 }
