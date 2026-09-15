@@ -27,3 +27,9 @@ vim.opt.winborder = "rounded"
 vim.opt.completeopt = vim.opt.completeopt + "noselect"
 
 vim.diagnostic.config({ virtual_text = false })
+
+vim.filetype.add({
+	filename = {
+		["Tiltfile"] = "starlark",
+	},
+})
