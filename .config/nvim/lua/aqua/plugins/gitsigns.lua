@@ -1,6 +1,13 @@
 return {
 	"lewis6991/gitsigns.nvim",
-	opts = {},
+	opts = {
+		worktrees = {
+			{
+				toplevel = vim.env.HOME,
+				gitdir = vim.env.HOME .. "/.dotfiles",
+			},
+		},
+	},
 	keys = {
 		{ "<leader>nh", "<cmd>lua require('gitsigns').next_hunk()<CR>" },
 		{ "<leader>ph", "<cmd>lua require('gitsigns').prev_hunk()<CR>" },
