@@ -10,7 +10,9 @@ return {
 
 			require("nvim-treesitter").install(ensure_installed)
 
+			local group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true })
 			vim.api.nvim_create_autocmd("FileType", {
+				group = group,
 				pattern = ensure_installed,
 				callback = function()
 					vim.treesitter.start()
