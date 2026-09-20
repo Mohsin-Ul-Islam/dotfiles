@@ -7,6 +7,9 @@ vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { noremap = true })
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true })
 
+vim.keymap.set("i", "<C-j>", "<C-n>", { noremap = true })
+vim.keymap.set("i", "<C-k>", "<C-p>", { noremap = true })
+
 -- rest.nvim
 vim.keymap.set("n", "<leader>rr", "<cmd>Rest run<CR>", { noremap = true, silent = true })
 
@@ -16,11 +19,11 @@ vim.keymap.set("n", "<leader>yy", '"+yy', { noremap = true })
 
 -- diagnostics
 local next_diagnostic = function()
-    vim.diagnostic.jump({ count = 1, float = true })
+	vim.diagnostic.jump({ count = 1, float = true })
 end
 
 local previous_diagnostic = function()
-    vim.diagnostic.jump({ count = -1, float = true })
+	vim.diagnostic.jump({ count = -1, float = true })
 end
 
 vim.keymap.set("n", "<leader>nd", next_diagnostic, { noremap = true, silent = true })
