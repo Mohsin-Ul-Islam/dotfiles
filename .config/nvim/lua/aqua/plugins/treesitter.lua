@@ -6,7 +6,8 @@ return {
 		branch = "main",
 		config = function()
 			-- python added: needed explicitly here since `main` has no auto_install equivalent
-			local ensure_installed = { "c", "go", "json", "http", "lua", "vim", "vimdoc", "query", "python" }
+			local ensure_installed =
+				{ "c", "go", "json", "http", "lua", "vim", "vimdoc", "query", "python", "markdown" }
 
 			require("nvim-treesitter").install(ensure_installed)
 
