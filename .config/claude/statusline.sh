@@ -23,8 +23,10 @@ esac
 
 input=$(cat)
 
-# Extract model, directory, and cwd
+# Extract model, effort level, directory, and cwd
 model=$(echo "$input" | jq -r '.model.display_name // .model.id // "?"')
+# Absent when the current model does not support the effort parameter
+effort=$(echo "$input" | jq -r '.effort.level // empty')
 cwd=$(echo "$input" | jq -r '.cwd // empty')
 dir=$(basename "$cwd" 2>/dev/null || echo "?")
 
@@ -173,8 +175,10 @@ else
     ctx="${bar} ${C_GRAY}~${pct}% of ${max_display} tokens"
 fi
 
-# Build output: Model | Dir | Branch (uncommitted) | Context
-output="${C_ACCENT}${model}${C_GRAY} | 📁${dir}"
+# Build output: Model (effort) | Dir | Branch (uncommitted) | Context
+output="${C_ACCENT}${model}"
+[[ -n "$effort" ]] && output+="${C_GRAY} (${effort})"
+output+="${C_GRAY} | 📁${dir}"
 [[ -n "$branch" ]] && output+=" | 🔀${branch} ${git_status}"
 output+=" | ${ctx}${C_RESET}"
 
