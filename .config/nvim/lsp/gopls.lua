@@ -2,7 +2,7 @@ local go_packages_driver_path = nil
 
 if vim.fn.findfile("WORKSPACE", vim.fn.getcwd()) == "" then
     if vim.fn.findfile("WORKSPACE.bazel", vim.fn.getcwd()) == "" then
-        go_packages_driver_path = vim.fn.getcwd() .. "/tools/gopackagesdriver.sh"
+        go_packages_driver_path = vim.fn.getcwd() .. "/tools/editor/gopackagesdriver.sh"
     end
 end
 
