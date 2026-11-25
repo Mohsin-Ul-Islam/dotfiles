@@ -7,9 +7,13 @@ return {
 		config = function()
 			-- python added: needed explicitly here since `main` has no auto_install equivalent
 			local ensure_installed =
-				{ "c", "go", "json", "http", "lua", "vim", "vimdoc", "query", "python", "markdown", "kotlin" }
+				{ "c", "go", "json", "http", "lua", "vim", "vimdoc", "query", "python", "markdown", "kotlin", "proto", "starlark" }
 
 			require("nvim-treesitter").install(ensure_installed)
+
+            if not vim.tbl_contains(ensure_installed, "bzl") then
+                table.insert(ensure_installed, "bzl")
+            end
 
 			local group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true })
 			vim.api.nvim_create_autocmd("FileType", {
